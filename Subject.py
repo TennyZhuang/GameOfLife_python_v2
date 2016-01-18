@@ -8,6 +8,6 @@ class Subject(object):
     def detach(self, ob):
         self.observers.remove(ob)
 
-    def notify(self):
+    def notify(self, **kwargs):
         for ob in self.observers:
-            ob.update()
+            ob.update(**kwargs)

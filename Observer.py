@@ -11,5 +11,5 @@ class Observer(object):
         if self in self.subject.observers:
             self.subject.detach(self)
 
-    def update(self):
+    def update(self, **kwargs):
         raise NotImplementedError()
